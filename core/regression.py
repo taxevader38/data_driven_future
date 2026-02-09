@@ -1,5 +1,5 @@
 """
-Docstring for core.regression, all code is licensed and patented to Christopher Bengen®
+Docstring for core.regression
 """
 
 
