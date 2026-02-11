@@ -8,9 +8,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_auc_score, roc_curve
 
-#Create a directory for any outputs
-os.makedirs("test_outputs_v2", exist_ok=True)
-
 #Read the CSV file and save into a data frame
 df = pd.read_csv('data/StudentPerformanceFactors.csv')
 
@@ -36,5 +33,5 @@ plt.plot([0, 1], [0, 1], linestyle="--")
 plt.xlabel("False Positive Rate")
 plt.ylabel("True Positive Rate")
 plt.title("ROC Curve")
-plt.savefig("test_outputs_v2/roc_curve.png")
+plt.savefig("test_outputs/roc_curve.png")
 plt.close()
