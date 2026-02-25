@@ -1,0 +1,39 @@
+Feature,Importance
+What is your Grade Level?_11,0.013178697474035139
+What is your Grade Level?_12,0.0022959998708673903
+What is your Grade Level?_9,0.0027794613016150316
+What is your Grade Level?_Post-Graduation/Adult,0.03292315424779626
+Have you ever spent or been asked to spend real money on a video game?_Yes,0.00010834350674569158
+How often do you make in-game purchases?_Often,0.3750302561226935
+How often do you make in-game purchases?_Rarely,0.007223592078003466
+How often do you make in-game purchases?_Sometimes,0.11613542829022434
+"If you have made in-game purchases, around how much money have you spent in total?_$100",0.0016911838813368795
+"If you have made in-game purchases, around how much money have you spent in total?_$1000+",0.04937399662660721
+"If you have made in-game purchases, around how much money have you spent in total?_$50",0.008549255683478963
+"If you have made in-game purchases, around how much money have you spent in total?_$500",0.013239244817581266
+"What do you usually buy?_Battle passes, Cosmetics (Skins, outfits, pets etc.), Currency (V-Bucks, Robux, Steam Cash, Giftcards)",0.011985943655710637
+"What do you usually buy?_Battle passes, Cosmetics (Skins, outfits, pets etc.), Currency (V-Bucks, Robux, Steam Cash, Giftcards), Subscriptions, Downloadable Content (DLC)",0.00014440040813166118
+"What do you usually buy?_Battle passes, Cosmetics (Skins, outfits, pets etc.), Downloadable Content (DLC)",0.000483800157237286
+"What do you usually buy?_Battle passes, Currency (V-Bucks, Robux, Steam Cash, Giftcards), Subscriptions",0.0006277981720972044
+"What do you usually buy?_Cosmetics (Skins, outfits, pets etc.), Currency (V-Bucks, Robux, Steam Cash, Giftcards)",0.001112508979922822
+"What do you usually buy?_Cosmetics (Skins, outfits, pets etc.), Currency (V-Bucks, Robux, Steam Cash, Giftcards), Downloadable Content (DLC)",6.73412115798744e-05
+"What do you usually buy?_Cosmetics (Skins, outfits, pets etc.), Currency (V-Bucks, Robux, Steam Cash, Giftcards), Subscriptions, Downloadable Content (DLC)",0.0043337396730319675
+"What do you usually buy?_Currency (V-Bucks, Robux, Steam Cash, Giftcards)",0.00027650945566194625
+"What do you usually buy?_Currency (V-Bucks, Robux, Steam Cash, Giftcards), Downloadable Content (DLC)",0.0003096313148207592
+"What do you usually buy?_Currency (V-Bucks, Robux, Steam Cash, Giftcards), Subscriptions",0.00018306296928884068
+What do you usually buy?_Downloadable Content (DLC),4.221442097408038e-05
+What do you usually buy?_Nothing,5.7977949451565346e-05
+What is your main reason for spending money in-game?_Faster progression,0.0009855714600809512
+What is your main reason for spending money in-game?_I don't spend money on games,0.00040144516595762476
+What is your main reason for spending money in-game?_Personalization & Customization,0.0071152573492735205
+What is your main reason for spending money in-game?_To compete with other players,0.09125399284495979
+Do you feel in game purchases improve your enjoyment when playing games?_Maybe,0.0024892319599097946
+Do you feel in game purchases improve your enjoyment when playing games?_No,0.000583670162364072
+Do you feel in game purchases improve your enjoyment when playing games?_Yes,0.008688128080004203
+Do you try to budget yourself? How much monthly?_$15 - 30,0.011854742189673317
+Do you try to budget yourself? How much monthly?_$40 - $80,0.16758739687280438
+Do you try to budget yourself? How much monthly?_I don't spend money on games,0.003943348471275805
+Have you ever spent more money than expected?_Yes,0.00739733971467644
+Which of the following would encourage you the most to buy?_Faster Progression,0.0015888576302625506
+Which of the following would encourage you the most to buy?_Limited Time Items,0.044667603259128705
+Which of the following would encourage you the most to buy?_Sales or Discounts,0.009289872570735172
