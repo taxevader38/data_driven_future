@@ -1,12 +1,26 @@
+# ============================================================
+# Program: Graph Plotting
+# Purpose: Load data gathered from the classification and regression models and create graphs based on it
+# Evaluation Metric: None
+# ============================================================
+
+# ----------------------------
+# Library Imports
+# ----------------------------
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score
 
-# Load saved data
+# ----------------------------
+# Load & Prepare Dataset
+# ----------------------------
+
+# Load prediction and features from regression model
 results = pd.read_csv("project/ml_data_output/spending_predictions.csv")
 importances = pd.read_csv("project/ml_data_output/feature_importance.csv")
 
-# Extract columns
+# Extract needed columns
 y_test = results["Actual"]
 predictions = results["Predicted"]
 
@@ -18,8 +32,13 @@ grade_means = grade_means.sort_values("Predicted")
 roc_df = pd.read_csv("project/ml_data_output/roc_data.csv")
 roc_score = roc_df["AUC"].iloc[0]
 
+#Load cleaned ROC Data
 clean_roc_df = pd.read_csv("project/ml_data_output/cleaned_roc_data.csv")
-clean_roc_score = clean_roc_df["CLEAN_AUC"].iloc[0] 
+clean_roc_score = clean_roc_df["AUC"].iloc[0] 
+
+# ----------------------------
+# Plot data in graphs
+# ----------------------------
 
 # ---- Actual vs Predicted ----
 plt.figure(figsize=(8,8))
@@ -88,7 +107,7 @@ plt.tight_layout()
 plt.savefig("project/ml_graph_output/spending_by_grade.png")
 plt.close()
 
-# ---- ROC-AUC Curve ----
+# ---- Uncleaned ROC-AUC Curve ----
 plt.figure(figsize=(8,6))
 
 plt.plot(roc_df["FPR"], roc_df["TPR"])
@@ -101,9 +120,9 @@ plt.title(f"ROC Curve (AUC = {roc_score:.3f})")
 plt.tight_layout()
 plt.savefig("project/ml_graph_output/roc_curve.png")
 plt.close()
-# ---- ---- ---- ---- ----
-plt.figure(figsize=(8,6))
 
+# ---- Cleaned ROC-AUC Curve ----
+plt.figure(figsize=(8,6))
 plt.plot(clean_roc_df["FPR"], clean_roc_df["TPR"])
 plt.plot([0, 1], [0, 1], linestyle="--")
 
