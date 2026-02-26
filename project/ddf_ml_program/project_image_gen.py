@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score
 
 # Load saved data
-results = pd.read_csv("project/ml_graph_output/test_predictions.csv")
-importances = pd.read_csv("project/ml_graph_output/feature_importance.csv")
+results = pd.read_csv("project/ml_data_output/spending_predictions.csv")
+importances = pd.read_csv("project/ml_data_output/feature_importance.csv")
 
 # Extract columns
 y_test = results["Actual"]
@@ -13,6 +13,13 @@ predictions = results["Predicted"]
 # Group by grade
 grade_means = results.groupby("Grade Level")[["Predicted"]].mean()
 grade_means = grade_means.sort_values("Predicted")
+
+# Load ROC data
+roc_df = pd.read_csv("project/ml_data_output/roc_data.csv")
+roc_score = roc_df["AUC"].iloc[0]
+
+clean_roc_df = pd.read_csv("project/ml_data_output/cleaned_roc_data.csv")
+clean_roc_score = clean_roc_df["CLEAN_AUC"].iloc[0] 
 
 # ---- Actual vs Predicted ----
 plt.figure(figsize=(8,8))
@@ -67,6 +74,7 @@ plt.tight_layout()
 plt.savefig("project/ml_graph_output/residual_plot.png")
 plt.close()
 
+# ---- Avg Spending by Grade ----
 plt.figure(figsize=(8,6))
 
 plt.bar(grade_means.index, grade_means["Predicted"])
@@ -78,4 +86,31 @@ plt.xticks(rotation=90)
 
 plt.tight_layout()
 plt.savefig("project/ml_graph_output/spending_by_grade.png")
+plt.close()
+
+# ---- ROC-AUC Curve ----
+plt.figure(figsize=(8,6))
+
+plt.plot(roc_df["FPR"], roc_df["TPR"])
+plt.plot([0, 1], [0, 1], linestyle="--")
+
+plt.xlabel("False Positive Rate")
+plt.ylabel("True Positive Rate")
+plt.title(f"ROC Curve (AUC = {roc_score:.3f})")
+
+plt.tight_layout()
+plt.savefig("project/ml_graph_output/roc_curve.png")
+plt.close()
+# ---- ---- ---- ---- ----
+plt.figure(figsize=(8,6))
+
+plt.plot(clean_roc_df["FPR"], clean_roc_df["TPR"])
+plt.plot([0, 1], [0, 1], linestyle="--")
+
+plt.xlabel("False Positive Rate")
+plt.ylabel("True Positive Rate")
+plt.title(f"ROC Curve (AUC = {clean_roc_score:.3f})")
+
+plt.tight_layout()
+plt.savefig("project/ml_graph_output/clean_roc_curve.png")
 plt.close()

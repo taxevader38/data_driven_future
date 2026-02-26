@@ -109,7 +109,7 @@ results_df = pd.DataFrame({
     "Predicted": preds
 })
 
-results_df.to_csv("project/ml_graph_output/test_predictions.csv", index=False)
+results_df.to_csv("project/ml_data_output/spending_predictions.csv", index=False)
 
 # Save feature importances
 importances_df = pd.DataFrame({
@@ -117,4 +117,4 @@ importances_df = pd.DataFrame({
     "Importance": model.feature_importances_
 })
 
-importances_df.to_csv("project/ml_graph_output/feature_importance.csv", index=False)
+importances_df.to_csv("project/ml_data_output/feature_importance.csv", index=False)
